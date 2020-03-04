@@ -4,7 +4,6 @@ services:
     # image: maddogjt/dockhome-assistant:stable
     build: 
       context: octoprint/
-      dockerfile: ../Dockerfile.octoprint
       args:
         - VERSION=1.3.12
     volumes:
@@ -18,7 +17,6 @@ services:
     # image: maddogjt/dockhome-assistant:stable
     build: 
       context: haproxy/
-      dockerfile: ../Dockerfile.haproxy
       args:
         - VERSION=1.3.12
     volumes:
@@ -33,7 +31,6 @@ services:
     # image: maddogjt/dockhome-assistant:stable
     build: 
       context: webcam/
-      dockerfile: ../Dockerfile.webcam
       #args:
     #volumes:
       #- ./config:/data

@@ -1,5 +1,0 @@
-*
-!Dockerfile.*
-!haproxy.cfg
-!start-mjpg-streamer
-!supervisord.conf
