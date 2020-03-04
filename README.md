@@ -1,4 +1,4 @@
-# OctoPrint
+# DoctoPrint
 
 [![build status][travis-image]][travis-url]
 
@@ -12,34 +12,15 @@ This is a Dockerfile to set up [OctoPrint](http://octoprint.org/). It supports t
 Just run:
 
 ```sh
-docker run nunofgs/octoprint
+docker run jtranchida/doctoprint
 ```
 
 Now have a beer, you did it. 🍻
 
 # Tags
 
-- `1.3.12`, `1.3.12-debian`, `debian`, `latest` ([Dockerfile](https://github.com/nunofgs/docker-octoprint/blob/master/debian/Dockerfile))
-- `1.3.12-alpine`, `alpine` ([Dockerfile](https://github.com/nunofgs/docker-octoprint/blob/master/alpine/Dockerfile))
-- `1.3.11`, `1.3.11-debian` ([Dockerfile](https://github.com/nunofgs/docker-octoprint/blob/master/debian/Dockerfile))
-- `1.3.11-alpine` ([Dockerfile](https://github.com/nunofgs/docker-octoprint/blob/master/alpine/Dockerfile))
-- `1.3.10` ([Dockerfile](https://github.com/nunofgs/docker-octoprint/blob/master/debian/Dockerfile))
-- `1.3.9` ([Dockerfile](https://github.com/nunofgs/docker-octoprint/blob/master/debian/Dockerfile))
-- `1.3.8` ([Dockerfile](https://github.com/nunofgs/docker-octoprint/blob/master/debian/Dockerfile))
-- `1.3.7` ([Dockerfile](https://github.com/nunofgs/docker-octoprint/blob/master/debian/Dockerfile))
-- `1.3.6` ([Dockerfile](https://github.com/nunofgs/docker-octoprint/blob/master/debian/Dockerfile))
-- `master-debian`, `master` (_Automatically built daily from OctoPrint's `master` branch_)
-- `master-alpine` (_Automatically built daily from OctoPrint's `master` branch_)
-
-# Tested devices
-
-| Device              | Working? |
-| ------------------- | -------- |
-| Raspberry Pi 2b     | ✅       |
-| Raspberry Pi 3b+    | ✅       |
-| Raspberry Pi Zero W | ✅       |
-
-Please let me know if you test any others, would love to increase the compatibility list!
+- `1.3.12`, `latest` ([Dockerfile](https://github.com/maddogjt/doctoprint/blob/master/octoprint/Dockerfile))
+- `master` (_Automatically built daily from OctoPrint's `master` branch_)
 
 # Usage
 
@@ -48,7 +29,7 @@ $ docker run \
   --device=/dev/video0 \
   -p 80:80 \
   -v /mnt/data:/data \
-  nunofgs/octoprint
+  jtranchida/doctoprint
 ```
 
 # Environment Variables
@@ -146,5 +127,5 @@ Original credits go to https://bitbucket.org/a2z-team/docker-octoprint. I initia
 
 MIT
 
-[travis-image]: https://img.shields.io/travis/nunofgs/docker-octoprint.svg?style=flat-square
-[travis-url]: https://travis-ci.org/nunofgs/docker-octoprint
+[travis-image]: https://img.shields.io/travis/jtranchida/doctoprint.svg?style=flat-square
+[travis-url]: https://travis-ci.org/jtranchida/doctoprint
