@@ -1,0 +1,45 @@
+version: '3'
+services:
+  octoprint:
+    # image: maddogjt/dockhome-assistant:stable
+    build: 
+      context: octoprint/
+      dockerfile: ../Dockerfile.octoprint
+      args:
+        - VERSION=1.3.12
+    volumes:
+      - ./config:/data
+    #devices:
+      #- /dev/ttyACM1:/printer
+    restart: always
+    #ports:
+    #  - "5000:5000"
+  haproxy:
+    # image: maddogjt/dockhome-assistant:stable
+    build: 
+      context: haproxy/
+      dockerfile: ../Dockerfile.haproxy
+      args:
+        - VERSION=1.3.12
+    volumes:
+      - ./config:/data
+    #devices:
+      #- /dev/ttyACM1:/printer
+    restart: always
+    ports:
+      - "80:80"
+
+  webcam:
+    # image: maddogjt/dockhome-assistant:stable
+    build: 
+      context: webcam/
+      dockerfile: ../Dockerfile.webcam
+      #args:
+    #volumes:
+      #- ./config:/data
+    #devices:
+      #- /dev/ttyACM1:/printer
+    restart: always
+    ports:
+      - "8080:8080"
+

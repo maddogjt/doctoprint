@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if ! expr "$MJPEG_STREAMER_INPUT" : ".*\.so.*" > /dev/null; then
+  MJPEG_STREAMER_INPUT="input_uvc.so $MJPEG_STREAMER_INPUT"
+fi
+
+export LD_LIBRARY_PATH="/usr/local/lib/mjpg-streamer"
+exec mjpg_streamer \
+  -i "$MJPEG_STREAMER_INPUT -d $CAMERA_DEV" \
+  -o "output_http.so -w /usr/local/share/mjpg-streamer/www -p 8080"
